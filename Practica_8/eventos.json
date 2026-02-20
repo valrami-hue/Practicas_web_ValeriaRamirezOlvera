@@ -1,0 +1,20 @@
+[
+  {
+    "titulo": "Carlos Rivera",
+    "fecha": "2026-02-28",
+    "lugar": "Plaza de Toros",
+    "precio": 909
+  },
+  {
+    "titulo": "Ballet de Kiev ",
+    "fecha": "2026-03-05",
+    "lugar": "Auditorio Gota de Plata",
+    "precio": 871
+  },
+  {
+    "titulo": "Festival de Danza Contemporánea",
+    "fecha": "2026-05-10",
+    "lugar": "Auditorio Nacional",
+    "precio": 300
+  }
+]
