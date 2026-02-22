@@ -1,0 +1,23 @@
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.formulario-card {
+  max-width: 500px;
+  margin: auto;
+  border-radius: 15px;
+}
+
+.titulo {
+  font-weight: bold;
+  color: #4a4a4a;
+}
+
+.form-control {
+  border-radius: 10px;
+}
+
+.btn-primary {
+  border-radius: 10px;
+  font-weight: bold;
+}

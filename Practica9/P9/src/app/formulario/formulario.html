@@ -1,0 +1,81 @@
+<div class="container mt-5">
+  <div class="card shadow-lg p-4 formulario-card">
+
+    <h2 class="text-center mb-4 titulo">
+      Registro de Alumno
+    </h2>
+
+    <form #formAlumno="ngForm" (ngSubmit)="guardarAlumno(formAlumno)">
+
+      <div class="mb-3">
+        <label class="form-label">Nombre</label>
+        <input type="text"
+               class="form-control"
+               name="nombre"
+               ngModel
+               #nombre="ngModel"
+               required
+               minlength="3"
+               pattern="^[a-zA-ZÁÉÍÓÚáéíóúñÑ ]+$"
+               placeholder="Ingresa el nombre"
+               (keypress)="soloLetras($event)"
+               [class.is-invalid]="nombre.invalid && nombre.touched"
+               [class.is-valid]="nombre.valid && nombre.touched">
+
+        <div class="invalid-feedback">
+          Solo letras, mínimo 3 caracteres.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Edad</label>
+        <input type="number"
+               class="form-control"
+               name="edad"
+               ngModel
+               #edad="ngModel"
+               required
+               min="15"
+               max="99"
+               placeholder="Ingresa la edad"
+               (keypress)="soloNumeros($event)"
+               [class.is-invalid]="edad.invalid && edad.touched"
+               [class.is-valid]="edad.valid && edad.touched">
+
+        <div class="invalid-feedback">
+          Solo números entre 15 y 99.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Carrera</label>
+        <input type="text"
+               class="form-control"
+               name="carrera"
+               ngModel
+               #carrera="ngModel"
+               required
+               minlength="3"
+               pattern="^[a-zA-ZÁÉÍÓÚáéíóúñÑ ]+$"
+               placeholder="Ingresa la carrera"
+               (keypress)="soloLetras($event)"
+               [class.is-invalid]="carrera.invalid && carrera.touched"
+               [class.is-valid]="carrera.valid && carrera.touched">
+
+        <div class="invalid-feedback">
+          Solo letras, mínimo 3 caracteres.
+        </div>
+      </div>
+
+      <div class="d-grid">
+        <button type="submit"
+                class="btn btn-primary btn-lg"
+                [disabled]="formAlumno.invalid">
+          Guardar Alumno
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+</div>
